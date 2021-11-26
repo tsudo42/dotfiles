@@ -1,3 +1,6 @@
 #!/bin/bash
 rm ~/.bashrc
-ln -s ~/dotfiles/centos7/.bashrc ~/.bashrc
+cp my.bashrc ../
+cp my.vimrc ../
+ln -s ~/dotfiles/my.bashrc ~/.bashrc
+ln -s ~/dotfiles/my.vimrc ~/.vimrc
