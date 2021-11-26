@@ -5,7 +5,7 @@ mkdir gitclones
 cd gitclones
 git clone https://github.com/itchyny/lightline.vim
 
-mkdir -p ~/dotsfile/vimex/pack/plugins/start/lightline
+mkdir -p ~/dotfiles/vimex/pack/plugins/start/lightline
 cp -R lightline.vim/ ~/dotfiles/vimex/pack/plugins/start/lightline
 
 git clone https://github.com/cocopon/iceberg.vim.git

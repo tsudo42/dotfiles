@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # install dependency
-# assume that gcc-c++, python-devel, and ruby-devel are already installed.
-sudo yum install ncurses-devel lua-devel
+sudo yum install gcc-c++ ncurses-devel python-devel ruby-devel lua-devel
 
 
 cd ~/dotfiles/centos7

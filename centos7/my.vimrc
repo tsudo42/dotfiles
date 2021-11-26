@@ -9,12 +9,7 @@ set listchars=tab:>-,trail:-,eol:$,extends:>,precedes:<,nbsp:%
 set tabstop=4
 set shiftwidth=4
 
-" Syntax Highlight
-let OSTYPE = system('uname')
-if OSTYPE == "Darwin\n"
-	:set term=xterm-256color
-	:syntax on
-endif
+syntax on
 
 colorscheme iceberg
 

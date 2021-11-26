@@ -8,6 +8,9 @@ yum install -y sudo
 # adduser
 useradd -G wheel doj
 
-echo "\n\ndo \"passwd doj\", and do \"su doj\"!"
+echo ""
+echo ""
 
-echo "\n\nOnce you entered doj, do \"sudo echo 0\"!"
+echo "do \"passwd doj\", and do \"su doj\"!"
+
+echo "Once you entered doj, do \"sudo echo 0\"!"
