@@ -1,5 +1,9 @@
 
+"set default color
+colorscheme darkblue
+"set iceberg
 set runtimepath+=~/dotfiles/vimex
+colorscheme iceberg
 
 "basic settings by Doj
 set number
@@ -10,8 +14,7 @@ set tabstop=4
 set shiftwidth=4
 
 syntax on
-
-colorscheme iceberg
+set term=xterm-256color
 
 "settings about lightline by D
 set packpath+=~/dotfiles/vimex
