@@ -5,6 +5,8 @@ colorscheme darkblue
 set runtimepath+=~/dotfiles/vimex
 colorscheme iceberg
 
+set encoding=utf-8
+
 "basic settings by Doj
 set number
 set ambiwidth=double
