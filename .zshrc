@@ -36,31 +36,8 @@ setopt no_beep
 DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 
+# starship
+eval "$(starship init zsh)"
+
 # anyenv
 eval "$(anyenv init -)"
-
-# git
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{magenta}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
-zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
-
-# prompt
-
-#PROMPT='
-#[%B%F{red}%n@%m%f%b:%F{green}%c%f:%F{cyan}%?%f]%F{cyan}$vcs_info_msg_0_%f
-#%F{yellow}$%f '
-
-local prompt_hostname="%F{082}%B%n%b%f"
-local prompt_location="%F{081}%B%~%b%f"
-local prompt_mark="%B%F{208}%(!,#,$) %f%b"
-local status_code="%(?,,%F{208}:%f%B%F{red}%?%f%b)"
-local number_of_jobs="%(1j.%F{208}:%f%F{226}%B%j%b%f.)"
-
-PROMPT="
-[${prompt_location}%B"'$vcs_info_msg_0_'"%b${number_of_jobs}${status_code}]
-${prompt_mark}"

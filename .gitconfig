@@ -1,0 +1,24 @@
+[user]
+	name = tsudo42
+	email = 91622558+tsudo42@users.noreply.github.com
+[status]
+	showUntrackedFiles = all
+[core]
+	ignorecase = false
+	precomposeunicode = true
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	quotepath = false
+[merge]
+	conflictStyle = diff3
+[init]
+	defaultBranch = master
+[alias]
+	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
+[credential]
+	helper = osxkeychain
+[include]
+	path = ~/.gitconfig_shared

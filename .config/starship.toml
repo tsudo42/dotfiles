@@ -1,0 +1,211 @@
+# starship.toml
+
+format = """
+[\\[](bold)\
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$cmake\
+$cobol\
+$container\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+(:$sudo$cmd_duration$status$jobs)\
+[\\]](bold)$line_break\
+$battery\
+$time\
+$shell\
+$character
+"""
+
+scan_timeout = 30
+command_timeout = 500
+add_newline = true
+
+[character]
+format = "[\\$ ](bold #fd8924)"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bold #65D7FD"
+read_only = " ro"
+truncation_length = 30
+truncate_to_repo = false
+
+[git_branch]
+format = " on [$symbol$branch]($style)"
+symbol = ""
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+[cmd_duration]
+format = "[$duration]($style)"
+min_time = 1000
+style = "yellow"
+
+[status]
+disabled = false
+format = "[$int]($style)"
+
+[jobs]
+format = "[$symbol$number]($style)"
+
+# === plain symbol preset === #
+
+[aws]
+symbol = "aws "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[docker_context]
+symbol = "docker "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[golang]
+symbol = "go "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[nodejs]
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[package]
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
+
+[python]
+symbol = "py "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
