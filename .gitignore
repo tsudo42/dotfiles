@@ -1,3 +1,4 @@
 # .gitignore
 
 .config/anyenv/anyenv-install
+.vim/tmp

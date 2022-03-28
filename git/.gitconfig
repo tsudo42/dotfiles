@@ -6,6 +6,7 @@
 [core]
 	ignorecase = false
 	precomposeunicode = true
+	excludesfile = /Users/tsudo/.gitignore
 [color]
 	ui = true
 	diff = auto

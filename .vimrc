@@ -31,6 +31,10 @@ set runtimepath+=~/.vim/iceberg.vim
 colorscheme iceberg
 let g:lightline = { 'colorscheme': 'iceberg', }
 
+" tmp files
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
+set undodir=~/.vim/tmp
 
 "------------------------------------------------------------
 " Features {{{1

@@ -18,6 +18,11 @@ link_to_homedir() {
   if [[ "$HOME" != "$dotdir" ]];then
     for f in $dotdir/.??*; do
       [[ `basename $f` == ".git" ]] && continue
+      [[ `basename $f` == ".gitconfig" ]] && continue
+      [[ `basename $f` == ".gitignore" ]] && continue
+      [[ `basename $f` == ".gitkeep" ]] && continue
+      [[ `basename $f` == ".gitmodules" ]] && continue
+      [[ `basename $f` == ".github" ]] && continue
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
       fi
@@ -47,5 +52,6 @@ while [ $# -gt 0 ];do
 done
 
 link_to_homedir
+command touch "$HOME/.gitconfig"
 git config --global include.path "~/.gitconfig_shared"
 command printf "\033[32;1m Install completed!!!! \033[0m\n"
