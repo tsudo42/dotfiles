@@ -7,13 +7,30 @@
 
 "------------------------------------------------------------
 " My Personal Settings {{{1
-"
 
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file (restore to previous version)
+  if has('persistent_undo')
+    set undofile	" keep an undo file (undo changes after closing)
+  endif
+endif
+
+" Basic Settings
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
-hi NonText    ctermfg=59
-hi SpecialKey ctermfg=59
+" Package Settings
+set packpath+=~/.vim
+set runtimepath+=~/.vim/iceberg.vim
+
+colorscheme iceberg
+let g:lightline = { 'colorscheme': 'iceberg', }
+
 
 "------------------------------------------------------------
 " Features {{{1
@@ -171,4 +188,6 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+"------------------------------------------------------------
+set noshowmode
 "------------------------------------------------------------
