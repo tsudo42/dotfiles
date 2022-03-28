@@ -1,0 +1,199 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.startupEditor": "none",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "notebook.lineNumbers": "on",
+    "telemetry.telemetryLevel": "off",
+    "C_Cpp.clang_format_fallbackStyle": "",
+    "C_Cpp.formatting": "Disabled",
+    "workbench.colorTheme": "Iceberg",
+    "editor.tokenColorCustomizations": {
+        "[Iceberg]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "keyword.operator.c",
+                        "keyword.operator.comparison.c",
+                        "keyword.operator.logical.c",
+                        "keyword.operator.bitwise.shift.c",
+                        "keyword.operator.assignment.c",
+                        "keyword.operator.assignment.compound.c",
+                        "keyword.operator.assignment.compound.bitwise.c",
+                        "keyword.operator.increment.c",
+                        "keyword.operator.decrement.c",
+                        "keyword.operator.ternary.c"
+                    ],
+                    "settings": {
+                        "foreground": "#D0D0E0"
+                    }
+                },
+                {
+                    "scope": [
+                        "string.quoted.double.c",
+                        "string.quoted.single.c",
+                        "string.quoted.other.lt-gt.include.c",
+                        "string.quoted.double.include.c"
+                    ],
+                    "settings": {
+                        "foreground": "#CE9178"
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.control.c",
+                        "keyword.control.directive.include.c",
+                        "keyword.control.directive.define.c",
+                        "keyword.control.directive.conditional.c",
+                        "keyword.control.directive.diagnostic.error.c",
+                        "keyword.control.directive.diagnostic.warning.c",
+                        "keyword.other.typedef.c"
+                    ],
+                    "settings": {
+                        "foreground": "#C586C0"
+                    }
+                },
+                {
+                    "scope": "constant.character.escape.c",
+                    "settings": {
+                        "foreground": "#CE9178",
+                        "fontStyle": "underline"
+                    }
+                },
+                {
+                    "scope": "constant.character.escape.line-continuation.c",
+                    "settings": {
+                        "foreground": "#545769"
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.type.built-in.primitive.c"
+                    ],
+                    "settings": {
+                        "foreground": "#569CD6"
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.type.struct.c",
+                        "storage.type.enum.c",
+                        "storage.type.union"
+                    ],
+                    "settings": {
+                        "foreground": "#4EC9B0"
+                    }
+                },
+                {
+                    "scope": [
+                        "constant.numeric.decimal.c",
+                        "constant.numeric.binary.c",
+                        "constant.numeric.octal.c",
+                        "constant.numeric.hexadecimal.c"
+                    ],
+                    "settings": {
+                        "foreground": "#80E0A0"
+                    }
+                },
+                {
+                    "scope": [
+                        "constant.numeric.decimal.point.c",
+                        "constant.numeric.exponent.decimal.c",
+                        "keyword.other.unit.exponent.decimal.c"
+                    ],
+                    "settings": {
+                        "foreground": "#80E0A0"
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.other.unit.binary.c",
+                        "keyword.other.unit.octal.c",
+                        "keyword.other.unit.hexadecimal.c",
+                        "keyword.other.unit.suffix.integer.c",
+                        "keyword.other.unit.suffix.floating-point.c"
+                    ],
+                    "settings": {
+                        "foreground": "#50A080",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.modifier.c"
+                    ],
+                    "settings": {
+                        "foreground": "#569CD6",
+                        "fontStyle": "italic underline"
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.function.preprocessor.c",
+                        "variable.parameter.preprocessor.c"
+                    ],
+                    "settings": {
+                        "foreground": "#4CBAF6"
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.operator.sizeof.c"
+                    ],
+                    "settings": {
+                        "foreground": "#A093C7"
+                    }
+                }
+            ]
+        }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Iceberg]": {
+            "rules": {
+                "templateType": {
+                    "foreground": "#4EC9B0"
+                },
+                "enumMember": {
+                    "foreground": "#4CBAF6"
+                },
+                "function": {
+                    "foreground": "#DCDCAA"
+                },
+                "variable.global": {
+                    "foreground": "#9CDCFE",
+                    "fontStyle": "italic bold"
+                },
+                "variable.local": {
+                    "foreground": "#9CDCFE",
+                    "fontStyle": "italic"
+                },
+                "macro": {
+                    "foreground": "#4CBAF6",
+                    "fontStyle": "bold"
+                },
+                "property": {
+                    "foreground": "#9CDCFE",
+                    "fontStyle": "italic"
+                },
+                "namespace": {
+                    "foreground": "#4EC9B0",
+                    "fontStyle": "bold"
+                },
+                "parameter": {
+                    "foreground": "#9CDCFE",
+                    "fontStyle": "italic"
+                },
+                "type": {
+                    "foreground": "#539BD8"
+                }
+            }
+        }
+    }
+}
