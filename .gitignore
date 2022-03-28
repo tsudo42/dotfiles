@@ -1,4 +1,5 @@
 # .gitignore
 
-.config/anyenv/anyenv-install
 .vim/tmp
+.config/anyenv/anyenv-install
+.config/iterm2/AppSupport
