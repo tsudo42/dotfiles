@@ -57,6 +57,11 @@ _man(){
 }
 alias man="_man"
 
+# texlive pathes
+export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
+export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
+export PATH=/usr/local/texlive/2022/bin/universal-darwin:$PATH
+
 # starship
 eval "$(starship init zsh)"
 
