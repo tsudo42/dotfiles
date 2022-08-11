@@ -58,7 +58,7 @@ _man(){
 alias man="_man"
 
 # texlive pathes
-export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
+#export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
 export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
 export PATH=/usr/local/texlive/2022/bin/universal-darwin:$PATH
 
@@ -67,3 +67,6 @@ eval "$(starship init zsh)"
 
 # anyenv
 eval "$(anyenv init -)"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/tsudo/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
