@@ -68,5 +68,11 @@ eval "$(starship init zsh)"
 # anyenv
 eval "$(anyenv init -)"
 
+# spell check
+alias sp="osascript spelling.scpt"
+
+# dictionary
+alias dict="~/dotfiles/bin/dict.py"
+
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/tsudo/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
