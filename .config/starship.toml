@@ -75,6 +75,14 @@ scan_timeout = 30
 command_timeout = 500
 add_newline = true
 
+[battery]
+format = "[$symbol]($style)"
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = "!"
+unknown_symbol = "!"
+empty_symbol = "!"
+
 [character]
 format = "[\\$ ](bold #fd8924)"
 
@@ -86,7 +94,7 @@ truncation_length = 30
 truncate_to_repo = false
 
 [git_branch]
-format = " on [$symbol$branch]($style)"
+format = "-[$symbol$branch]($style)"
 symbol = ""
 
 [git_commit]
@@ -104,6 +112,11 @@ deleted = "x"
 format = "[$duration]($style)"
 min_time = 1000
 style = "yellow"
+
+[python]
+format = '[\($virtualenv\)]($style)'
+detect_extensions = []
+detect_files = []
 
 [status]
 disabled = false
@@ -191,9 +204,6 @@ symbol = "pulumi "
 
 [purescript]
 symbol = "purs "
-
-[python]
-symbol = "py "
 
 [ruby]
 symbol = "rb "
