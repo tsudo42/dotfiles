@@ -1,11 +1,11 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   " Required:
-  set runtimepath+=/Users/tsudo/.config/nvim/bundle/neobundle.vim/
+  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/tsudo/.config/nvim/bundle'))
+call neobundle#begin(expand('~/.config/nvim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -60,11 +60,20 @@ set backupdir=~/.config/nvim/tmp
 set undodir=~/.config/nvim/tmp
 
 " iceberg
+set notermguicolors
 :colorscheme iceberg
 let g:lightline = { 'colorscheme': 'iceberg', }
 set noshowmode
 
 " NERDTree
-"  Start NERDTree when Vim starts with a directory argument.
+:let g:NERDTreeWinSize=20
+"  Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"  Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+"  If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+"  Mirror the NERDTree before showing it. This makes it the same on all tabs.
+nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>

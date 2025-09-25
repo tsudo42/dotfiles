@@ -28,6 +28,8 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set packpath+=~/.vim
 set runtimepath+=~/.vim/iceberg.vim
 
+" Colorscheme
+set notermguicolors
 colorscheme iceberg
 let g:lightline = { 'colorscheme': 'iceberg', }
 
